@@ -1,6 +1,9 @@
 ESLint Configuration for Creative-Area's Projects
 =================================================
 
+[![NPM][npm-image]][npm-url]
+[![devDependency Status][devDependency-image]][devDependency-url]
+
 ## Usage
 
 Everything happens in `package.json`.
@@ -25,3 +28,8 @@ Don't forget to `npm install`!
 ## License
 
 This ESLint configuration is distributed under the MIT license.
+
+[devDependency-image]: https://img.shields.io/david/dev/creative-area/eslint-config.svg?style=flat-square
+[devDependency-url]: https://david-dm.org/creative-area/eslint-config?type=dev
+[npm-image]: https://img.shields.io/npm/v/eslint-config-creative-area.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/eslint-config-creative-area
