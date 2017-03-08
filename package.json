@@ -1,0 +1,30 @@
+{
+	"name": "eslint-config-creative-area",
+	"version": "0.1.0-pre",
+	"description": "eslint configuration used in all creative-area's projects",
+	"main": "index.js",
+	"scripts": {
+		"test": "node node_modules/eslint/bin/eslint.js . && node features"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"creative-area"
+	],
+	"devDependencies": {
+		"eslint": "3.17.x"
+	},
+	"peerDependencies": {
+		"eslint": ">= 3"
+	},
+	"author": "Julian Aubourg <j@ubourg.net>",
+	"license": "MIT",
+	"homepage": "https://github.com/creative-area/eslint-config#readme",
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/creative-area/eslint-config.git"
+	},
+	"bugs": {
+		"url": "https://github.com/creative-area/eslint-config/issues"
+	}
+}
