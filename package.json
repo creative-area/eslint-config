@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-creative-area",
-	"version": "0.1.0",
+	"version": "0.2.0-pre",
 	"description": "eslint configuration used in all creative-area's projects",
 	"main": "index.js",
 	"scripts": {
