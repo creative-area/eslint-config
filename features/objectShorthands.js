@@ -3,9 +3,9 @@
 "use strict";
 
 var object = {
-	getTrue() {
-		return true;
-	},
+    getTrue() {
+        return true;
+    },
 };
 
 module.exports = object.getTrue();

@@ -1,5 +1,5 @@
 "use strict";
 
 module.exports = ( function( ...args ) {
-	return args[ 0 ];
+    return args[ 0 ];
 } )( true );

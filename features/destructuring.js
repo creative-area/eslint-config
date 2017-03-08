@@ -1,7 +1,7 @@
 "use strict";
 
 var [ object ] = [ {
-	"TRUE": true,
+    "TRUE": true,
 } ];
 var { TRUE } = object;
 
