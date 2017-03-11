@@ -1,4 +1,4 @@
-/* eslint quotes: off */
+/* eslint-disable quotes */
 
 "use strict";
 

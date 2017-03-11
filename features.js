@@ -1,4 +1,4 @@
-/* eslint no-console: off, no-sync: off */
+/* eslint-disable global-require, no-console, no-sync */
 
 "use strict";
 
@@ -8,12 +8,11 @@ var path = require( "path" );
 var features = {};
 var fields = fs.readdirSync( path.resolve( __dirname, "features" ) );
 var i;
-var localRequire = require;
 
 function testRequire( requireExpression ) {
     var result;
     try {
-        result = localRequire( requireExpression );
+        result = require( requireExpression );
     } catch ( error ) {
         result = false;
     }

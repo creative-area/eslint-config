@@ -1,4 +1,4 @@
-/* eslint object-shorthand: off */
+/* eslint-disable object-shorthand */
 
 "use strict";
 
