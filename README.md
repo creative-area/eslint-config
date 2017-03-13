@@ -27,9 +27,14 @@ Then, create an object named `eslintConfig` as follows:
 
 ## Environments
 
+### Browser
+
+Here are the configurations available for browsers:
+- `creative-area/browser/old` is compatible with any browser
+
 ### Node
 
-Here are the available configurations for node:
+Here are the configurations available for node:
 - `creative-area/node/0` is compatible with 0.10 and up
 - `creative-area/node/4` is compatible with 4.x.x and up
 - `creative-area/node/6` is compatible with 6.x.x and up
@@ -38,7 +43,7 @@ Here are the available configurations for node:
 
 ## "Manual" Configuration
 
-You create a configuration by using the factory facility inside your own `.eslintrc.js`. Like so:
+You create a configuration by using the factory from inside your own `.eslintrc.js`. Like so:
 
 ```js
 "use strict";
@@ -48,6 +53,7 @@ module.exports = require( "eslint-config-creative-area/factory" )( {
     "destructuring": false,
     "dotKeywords": true,
     "hasMap": true,
+    "isBrowser": false,
     "isNode": true,
     "lexicalDeclarators": true,
     "numericLiterals": true,
@@ -64,6 +70,7 @@ The object given to the factory function contains a list of features and environ
 - `destructuring`: object and array destructuring
 - `dotKeywords`: object dot notation with keywords
 - `hasMap`: Map/Set classes
+- `isBrowser`: running in a browser
 - `isNode`: running in node
 - `lexicalDeclarators`: `let` and `const`
 - `numericalLiterals`: binary, octal and hexadecimal literals
@@ -75,7 +82,7 @@ The object given to the factory function contains a list of features and environ
 
 ## License
 
-This ESLint configuration is distributed under the MIT license.
+These ESLint configurations are distributed under the MIT license.
 
 [devDependency-image]: https://img.shields.io/david/dev/creative-area/eslint-config.svg?style=flat-square
 [devDependency-url]: https://david-dm.org/creative-area/eslint-config?type=dev

@@ -5,6 +5,7 @@ module.exports = require( "../factory" )( {
     "destructuring": false,
     "dotKeywords": true,
     "hasMap": true,
+    "isBrowser": false,
     "isNode": true,
     "lexicalDeclarators": true,
     "numericLiterals": true,

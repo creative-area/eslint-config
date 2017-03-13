@@ -9,8 +9,9 @@ module.exports = function( features ) {
             "ecmaVersion": 2017,
         },
         "env": {
-            "node": features.isNode,
+            "browser": features.isBrowser,
             "es6": features.hasMap,
+            "node": features.isNode,
         },
         "rules": {
             "no-await-in-loop": "error",
