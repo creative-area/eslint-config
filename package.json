@@ -17,7 +17,6 @@
         "eslintconfig"
     ],
     "license": "MIT",
-    "main": "index.js",
     "name": "eslint-config-creative-area",
     "peerDependencies": {
         "eslint": ">= 3"

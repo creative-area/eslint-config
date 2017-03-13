@@ -9,8 +9,8 @@ module.exports = function( features ) {
             "ecmaVersion": 2017,
         },
         "env": {
-            "node": true,
-            "es6": true,
+            "node": features.isNode,
+            "es6": features.hasMap,
         },
         "rules": {
             "no-await-in-loop": "error",
@@ -199,7 +199,7 @@ module.exports = function( features ) {
                 "exports": "always-multiline",
                 "functions": "never",
                 "imports": "always-multiline",
-                "objects": "always-multiline",
+                "objects": features.trailingComma ? "always-multiline" : "never",
             } ],
             "comma-spacing": [ "error", {
                 "before": false,

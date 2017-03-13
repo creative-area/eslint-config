@@ -4,10 +4,13 @@ module.exports = require( "../factory" )( {
     "arrowFunctions": false,
     "destructuring": false,
     "dotKeywords": true,
+    "hasMap": true,
+    "isNode": true,
     "lexicalDeclarators": false,
     "numericLiterals": false,
     "objectShorthands": false,
     "restParams": false,
     "spreadOperator": false,
     "templateStrings": false,
+    "trailingComma": true,
 } );
