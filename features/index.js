@@ -2,13 +2,6 @@
 
 "use strict";
 
-var fs = require( "fs" );
-var path = require( "path" );
-
-var features = {};
-var fields = fs.readdirSync( path.resolve( __dirname, "features" ) );
-var i;
-
 function testRequire( requireExpression ) {
     var result;
     try {
@@ -19,8 +12,17 @@ function testRequire( requireExpression ) {
     return result;
 }
 
-for ( i = 0; i < fields.length; i++ ) {
-    features[ path.basename( fields[ i ], ".js" ) ] = testRequire( path.resolve( __dirname, "features", fields[ i ] ) );
+var path = require( "path" );
+
+var features = {};
+var files = require( "fs" ).readdirSync( __dirname );
+var i;
+
+for ( i = 0; i < files.length; i++ ) {
+    if ( files[ i ] !== "index.js" ) {
+        features[ path.basename( files[ i ], ".js" ) ] =
+            testRequire( path.resolve( __dirname, files[ i ] ) );
+    }
 }
 
 module.exports = features;

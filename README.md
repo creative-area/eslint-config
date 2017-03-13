@@ -15,6 +15,8 @@ First, in the `devDependencies` object add the following properties:
 "eslint-config-creative-area": "*"
 ```
 
+Don't forget to `npm install`!
+
 Then, create an object named `eslintConfig` as follows:
 
 ```json
@@ -23,7 +25,14 @@ Then, create an object named `eslintConfig` as follows:
 },
 ```
 
-Don't forget to `npm install`!
+This will feature-detect language constructs available in your environment (template strings, arrow functions, etc) and adjust eslint's behaviour accordingly.
+
+If you want to develop for down to a specific version of node, extend the following configurations :
+- `creative-area/node/0` for 0.10 and 0.12
+- `creative-area/node/4` for 4.x.x
+- `creative-area/node/6` for 6.x.x
+- `creative-area/node/8` for 8.x.x
+
 
 ## License
 
