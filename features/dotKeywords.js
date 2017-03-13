@@ -1,7 +1,7 @@
 "use strict";
 
 var object = {
-    "catch": true,
+    "class": true,
 };
 
-module.exports = object.catch;
+module.exports = object.class;

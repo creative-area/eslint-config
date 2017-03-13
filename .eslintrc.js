@@ -1,5 +1,3 @@
 "use strict";
 
-var factory = require( "./factory" );
-
-module.exports = factory( {} );
+module.exports = require( "./node/old" );
