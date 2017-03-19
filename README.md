@@ -57,11 +57,12 @@ You can also create a `.eslintrc` file in a sub-folder that contains code for an
 
 ## License
 
-These ESLint configurations and the code used to generate them are distributed under the MIT license.
+These ESLint configurations and the code used to generate them are distributed under the [MIT license][license-url].
 
 [dependency-image]: https://img.shields.io/david/creative-area/eslint-config.svg?style=flat-square
 [dependency-url]: https://david-dm.org/creative-area/eslint-config
 [devDependency-image]: https://img.shields.io/david/dev/creative-area/eslint-config.svg?style=flat-square
 [devDependency-url]: https://david-dm.org/creative-area/eslint-config?type=dev
+[license-url]: https://raw.githubusercontent.com/creative-area/eslint-config/master/LICENSE.txt
 [npm-image]: https://img.shields.io/npm/v/eslint-config-creative-area.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/eslint-config-creative-area
