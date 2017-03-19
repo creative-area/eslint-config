@@ -2,6 +2,7 @@ ESLint Configuration for Creative-Area's Projects
 =================================================
 
 [![NPM][npm-image]][npm-url]
+[![dependency Status][dependency-image]][dependency-url]
 [![devDependency Status][devDependency-image]][devDependency-url]
 
 ## Usage
@@ -40,6 +41,8 @@ Then, create an object named `eslintConfig` as follows:
 
 These ESLint configurations are distributed under the MIT license.
 
+[dependency-image]: https://img.shields.io/david/creative-area/eslint-config.svg?style=flat-square
+[dependency-url]: https://david-dm.org/creative-area/eslint-config
 [devDependency-image]: https://img.shields.io/david/dev/creative-area/eslint-config.svg?style=flat-square
 [devDependency-url]: https://david-dm.org/creative-area/eslint-config?type=dev
 [npm-image]: https://img.shields.io/npm/v/eslint-config-creative-area.svg?style=flat-square
