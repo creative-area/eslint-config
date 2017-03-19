@@ -7,11 +7,8 @@
     "devDependencies": {
         "eslint": "3.18.0"
     },
-    "engine": {
-        "node": ">=7.6"
-    },
     "eslintConfig": {
-        "extends": "./es2017.json",
+        "extends": "./es2015.json",
         "env": {
             "node": true
         }
