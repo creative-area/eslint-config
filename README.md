@@ -7,26 +7,44 @@ ESLint Configuration for Creative-Area's Projects
 
 ## Usage
 
-Everything happens in `package.json`.
+### `package.json`
 
-First, in the `devDependencies` object add the following properties:
+First, add the following properties to the `devDependencies` object:
 
 ```json
-"eslint": "3.18.x",
-"eslint-config-creative-area": "*"
+"eslint": "<eslint-version>",
+"eslint-config-creative-area": "<config-version>",
 ```
+
+where `<eslint-version>` and `<config-version>` are typically the latest (`3.18.0` and `0.6.0` respectively as of this writing).
 
 Don't forget to `npm install`!
 
 Then, create an object named `eslintConfig` as follows:
 
-```javascript
+```json
 "eslintConfig": {
     "extends": "creative-area/<ecma-version>",
     "env": {
-        // ...
+        "node": true
     }
 },
+```
+
+where `<ecma-version>` is the desired language version (typically `es<current-year>` unless you work with an older version of nodejs). 
+
+### `.eslintrc.json`
+
+You can also create a `.eslintrc.json` file in a sub-folder that contains code for another environment. For instance, if you have some commonjs-formatted code that is supposed to run in es5-compatible browsers, you'd create a `.eslintrc.json` file with the following content:
+
+```json
+{
+    "extends": "creative-area/es5",
+    "env": {
+        "browser": true,
+        "commonjs": true
+    }
+}
 ```
 
 ## Configurations Available
@@ -39,7 +57,7 @@ Then, create an object named `eslintConfig` as follows:
 
 ## License
 
-These ESLint configurations are distributed under the MIT license.
+These ESLint configurations and the code used to generate them are distributed under the MIT license.
 
 [dependency-image]: https://img.shields.io/david/creative-area/eslint-config.svg?style=flat-square
 [dependency-url]: https://david-dm.org/creative-area/eslint-config
