@@ -33,9 +33,9 @@ Then, create an object named `eslintConfig` as follows:
 
 where `<ecma-version>` is the desired language version (typically `es<current-year>` unless you work with an older version of nodejs). 
 
-### `.eslintrc.json`
+### `.eslintrc`
 
-You can also create a `.eslintrc.json` file in a sub-folder that contains code for another environment. For instance, if you have some commonjs-formatted code that is supposed to run in es5-compatible browsers, you'd create a `.eslintrc.json` file with the following content:
+You can also create a `.eslintrc` file in a sub-folder that contains code for another environment. For instance, if you have some commonjs-formatted code that is supposed to run in es5-compatible browsers, you'd create a json-formatted `.eslintrc` file with the following content:
 
 ```json
 {
