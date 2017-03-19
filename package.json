@@ -5,10 +5,16 @@
     },
     "description": "eslint configuration used in all creative-area's projects",
     "devDependencies": {
-        "eslint": "3.17.x"
+        "eslint": "3.18.0"
+    },
+    "engine": {
+        "node": ">=7.6"
     },
     "eslintConfig": {
-        "extends": "./node/0.js"
+        "extends": "./es2017.json",
+        "env": {
+            "node": true
+        }
     },
     "homepage": "https://github.com/creative-area/eslint-config#readme",
     "keywords": [
@@ -26,7 +32,7 @@
         "url" : "https://github.com/creative-area/eslint-config.git"
     },
     "scripts": {
-        "test": "node node_modules/eslint/bin/eslint.js . && node features"
+        "test": "node ./build && node node_modules/eslint/bin/eslint.js ."
     },
     "version": "0.6.0-pre"
 }
