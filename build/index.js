@@ -7,7 +7,7 @@ const fs = require( `fs` );
 const path = require( `path` );
 
 const versions =
-    fs.readFileSync( path.resolve( __dirname, `..`, `versions.txt` ), `utf8` )
+    fs.readFileSync( path.resolve( __dirname, `versions.txt` ), `utf8` )
         .trim()
         .split( /\s+/g )
         .map( string => Number( string ) );
