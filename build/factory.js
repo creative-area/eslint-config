@@ -90,6 +90,7 @@ module.exports = ecmaVersion => {
                 `error`,
                 {
                     "allowKeywords": es5,
+                    "allowPattern": `[^_]_+[^_]`,
                 },
             ],
             "eqeqeq": [
