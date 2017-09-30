@@ -5,7 +5,7 @@
     },
     "description": "eslint configuration used in all creative-area's projects",
     "devDependencies": {
-        "eslint": "4.3.0"
+        "eslint": "4.8.0"
     },
     "eslintConfig": {
         "extends": "./es2015.json",
