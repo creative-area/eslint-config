@@ -20,6 +20,7 @@ module.exports = ecmaVersion => {
         "rules": {
             "for-direction": `off`,
             "getter-return": `error`,
+            "no-async-promise-executor": `error`,
             "no-await-in-loop": `error`,
             "no-compare-neg-zero": `error`,
             "no-cond-assign": [ `error`, `except-parens` ],
@@ -53,6 +54,7 @@ module.exports = ecmaVersion => {
                     "skipTemplates": true,
                 },
             ],
+            "no-misleading-character-class": `error`,
             "no-obj-calls": `error`,
             "no-prototype-builtins": `off`,
             "no-regex-spaces": `error`,
@@ -62,6 +64,7 @@ module.exports = ecmaVersion => {
             "no-unreachable": `error`,
             "no-unsafe-finally": `error`,
             "no-unsafe-negation": `error`,
+            "require-atomic-updates": `warn`,
             "use-isnan": `error`,
             "valid-jsdoc": `warn`,
             "valid-typeof": `error`,
@@ -76,7 +79,7 @@ module.exports = ecmaVersion => {
             "array-callback-return": `error`,
             "block-scoped-var": `error`,
             "class-methods-use-this": `error`,
-            "complexity": [ `warn`, 10 ],
+            "complexity": [ `warn`, 20 ],
             "consistent-return": [
                 `warn`,
                 {
@@ -101,6 +104,7 @@ module.exports = ecmaVersion => {
                 },
             ],
             "guard-for-in": `off`,
+            "max-classes-per-file": [ `warn`, 1 ],
             "no-alert": `error`,
             "no-caller": `error`,
             "no-case-declarations": `error`,
@@ -213,7 +217,6 @@ module.exports = ecmaVersion => {
             "strict": [ `error`, `safe` ],
 
             "init-declarations": `off`,
-            "no-catch-shadow": `warn`,
             "no-delete-var": `error`,
             "no-label-var": `error`,
             "no-restricted-globals": [ `error` ],
@@ -306,6 +309,7 @@ module.exports = ecmaVersion => {
                     "allowArrowFunctions": true,
                 },
             ],
+            "function-paren-newline": `off`,
             "id-blacklist": [ `error` ],
             "id-length": [
                 `error`,
@@ -316,6 +320,7 @@ module.exports = ecmaVersion => {
                 },
             ],
             "id-match": [ `error` ],
+            "implicit-arrow-linebreak": `off`,
             "indent": [ `error`, 4 ],
             "jsx-quotes": [ `error`, `prefer-double` ],
             "key-spacing": [
@@ -341,7 +346,7 @@ module.exports = ecmaVersion => {
             ],
             "linebreak-style": [ `error`, `unix` ],
             "lines-around-comment": `off`,
-            "max-depth": [ `warn`, 4 ],
+            "max-depth": [ `warn`, 5 ],
             "max-len": [ `error`, 120, 4 ],
             "max-lines": [
                 `warn`,
@@ -351,15 +356,17 @@ module.exports = ecmaVersion => {
                     "skipComments": true,
                 },
             ],
+            "max-lines-per-function": `off`,
             "max-nested-callbacks": [ `warn`, 3 ],
-            "max-params": [ `warn`, 4 ],
-            "max-statements": [ `warn`, 25 ],
+            "max-params": [ `warn`, 5 ],
+            "max-statements": [ `warn`, 30 ],
             "max-statements-per-line": [
                 `error`,
                 {
                     "max": 1,
                 },
             ],
+            "multiline-comment-style": `off`,
             "multiline-ternary": `off`,
             "new-cap": `error`,
             "new-parens": `error`,
