@@ -8,7 +8,7 @@
         "eslint": "7.13.0"
     },
     "eslintConfig": {
-        "extends": "./es2019.json",
+        "extends": "./es2021.json",
         "env": {
             "node": true
         }

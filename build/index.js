@@ -1,5 +1,4 @@
 /* eslint-disable no-console, no-sync */
-
 "use strict";
 
 const factory = require( `./factory` );

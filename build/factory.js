@@ -1,5 +1,4 @@
 /* eslint-disable complexity, max-lines, no-magic-numbers */
-
 "use strict";
 
 module.exports = ecmaVersion => {

@@ -16,7 +16,7 @@ First, add the following properties to the `devDependencies` object:
 "eslint-config-creative-area": "<config-version>",
 ```
 
-where `<eslint-version>` and `<config-version>` are typically the latest (`3.18.0` and `0.6.0` respectively as of this writing).
+where `<eslint-version>` and `<config-version>` are typically the latest (`7.13.0` and `0.10.1` respectively as of this writing).
 
 Don't forget to `npm install`!
 
@@ -47,7 +47,7 @@ You can also create a `.eslintrc` file in a sub-folder that contains code for an
 }
 ```
 
-## Configurations Available
+## Available Configurations
 
 - `creative-area/es3`
 - `creative-area/es5`
@@ -56,6 +56,8 @@ You can also create a `.eslintrc` file in a sub-folder that contains code for an
 - `creative-area/es8` same as `creative-area/es2017`
 - `creative-area/es9` same as `creative-area/es2018`
 - `creative-area/es10` same as `creative-area/es2019`
+- `creative-area/es11` same as `creative-area/es2020`
+- `creative-area/es12` same as `creative-area/es2021`
 
 ## License
 
