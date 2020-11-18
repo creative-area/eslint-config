@@ -8,7 +8,7 @@
         "eslint": "7.13.0"
     },
     "eslintConfig": {
-        "extends": "./es2021.json",
+        "extends": "./es2021/script.json",
         "env": {
             "node": true
         }

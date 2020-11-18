@@ -1,4 +1,4 @@
-/* eslint-disable no-console, no-sync */
+/* eslint-disable no-console */
 "use strict";
 
 const factory = require( `./factory` );
@@ -13,13 +13,27 @@ const versions =
 
 versions.forEach( version => {
     console.log( `Generating for version ${ version }...` );
-    fs.writeFileSync(
-        path.resolve( __dirname, `..`, `es${ version }.json` ),
-        JSON.stringify(
-            factory( version ),
-            null,
-            `    `
-        ),
-        `utf8`
-    );
+    const data = factory( version );
+    if ( data.parserOptions.sourceType === `script` ) {
+        fs.writeFileSync(
+            path.resolve( __dirname, `..`, `es${ version }.json` ),
+            JSON.stringify( data, null, `    ` ),
+            `utf8`
+        );
+    } else {
+        try {
+            fs.mkdirSync( path.resolve( __dirname, `..`, `es${ version }` ) );
+        } catch ( e ) {}
+        fs.writeFileSync(
+            path.resolve( __dirname, `..`, `es${ version }/module.json` ),
+            JSON.stringify( data, null, `    ` ),
+            `utf8`
+        );
+        data.parserOptions.sourceType = `script`;
+        fs.writeFileSync(
+            path.resolve( __dirname, `..`, `es${ version }/script.json` ),
+            JSON.stringify( data, null, `    ` ),
+            `utf8`
+        );
+    }
 } );

@@ -14,9 +14,13 @@ module.exports = ecmaVersion => {
         "root": true,
         "parserOptions": {
             ecmaVersion,
+            "sourceType": es6 ? `module` : `script`,
         },
         "env": {
             es6,
+            "es2017": ecmaVersion >= 8,
+            "es2020": ecmaVersion >= 11,
+            "es2021": ecmaVersion >= 12,
         },
         "rules": {
             // possible errors

@@ -16,7 +16,7 @@ First, add the following properties to the `devDependencies` object:
 "eslint-config-creative-area": "<config-version>",
 ```
 
-where `<eslint-version>` and `<config-version>` are typically the latest (`7.13.0` and `0.10.1` respectively as of this writing).
+where `<eslint-version>` and `<config-version>` are typically the latest (`7.13.0` and `0.11.0` respectively as of this writing).
 
 Don't forget to `npm install`!
 
@@ -31,7 +31,7 @@ Then, create an object named `eslintConfig` as follows:
 },
 ```
 
-where `<ecma-version>` is the desired language version (typically `es<current-year>` unless you work with an older version of nodejs). 
+where `<ecma-version>` is the desired language version (typically `es<current-year>` unless you work with an older version of nodejs) followed by a slash (`/`) and the source type if above es6 (`module` or `script`).
 
 ### `.eslintrc`
 
@@ -51,13 +51,20 @@ You can also create a `.eslintrc` file in a sub-folder that contains code for an
 
 - `creative-area/es3`
 - `creative-area/es5`
-- `creative-area/es6` same as `creative-area/es2015`
-- `creative-area/es7` same as `creative-area/es2016`
-- `creative-area/es8` same as `creative-area/es2017`
-- `creative-area/es9` same as `creative-area/es2018`
-- `creative-area/es10` same as `creative-area/es2019`
-- `creative-area/es11` same as `creative-area/es2020`
-- `creative-area/es12` same as `creative-area/es2021`
+- `creative-area/es6/module` same as `creative-area/es2015/module`
+- `creative-area/es6/script` same as `creative-area/es2015/script`
+- `creative-area/es7/module` same as `creative-area/es2016/module`
+- `creative-area/es7/script` same as `creative-area/es2016/script`
+- `creative-area/es8/module` same as `creative-area/es2017/module`
+- `creative-area/es8/script` same as `creative-area/es2017/script`
+- `creative-area/es9/module` same as `creative-area/es2018/module`
+- `creative-area/es9/script` same as `creative-area/es2018/script`
+- `creative-area/es10/module` same as `creative-area/es2019/module`
+- `creative-area/es10/script` same as `creative-area/es2019/script`
+- `creative-area/es11/module` same as `creative-area/es2020/module`
+- `creative-area/es11/script` same as `creative-area/es2020/script`
+- `creative-area/es12/module` same as `creative-area/es2021/module`
+- `creative-area/es12/script` same as `creative-area/es2021/script`
 
 ## License
 
