@@ -31,5 +31,5 @@
     "scripts": {
         "test": "node ./build && node node_modules/eslint/bin/eslint.js ."
     },
-    "version": "0.10.2-pre"
+    "version": "0.11.0"
 }
