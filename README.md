@@ -55,6 +55,7 @@ You can also create a `.eslintrc` file in a sub-folder that contains code for an
 - `creative-area/es7` same as `creative-area/es2016`
 - `creative-area/es8` same as `creative-area/es2017`
 - `creative-area/es9` same as `creative-area/es2018`
+- `creative-area/es10` same as `creative-area/es2019`
 
 ## License
 

@@ -9,6 +9,8 @@ module.exports = ecmaVersion => {
     }
     const es5 = ecmaVersion >= 5;
     const es6 = ecmaVersion >= 6;
+    const es7 = ecmaVersion >= 7;
+    const es9 = ecmaVersion >= 9;
     return {
         "root": true,
         "parserOptions": {
@@ -18,6 +20,7 @@ module.exports = ecmaVersion => {
             es6,
         },
         "rules": {
+            // possible errors
             "for-direction": `off`,
             "getter-return": `error`,
             "no-async-promise-executor": `error`,
@@ -29,6 +32,7 @@ module.exports = ecmaVersion => {
             "no-control-regex": `error`,
             "no-debugger": `error`,
             "no-dupe-args": `error`,
+            "no-dupe-else-if": `error`,
             "no-dupe-keys": `error`,
             "no-duplicate-case": `error`,
             "no-empty": [
@@ -43,6 +47,7 @@ module.exports = ecmaVersion => {
             "no-extra-parens": `off`,
             "no-extra-semi": `error`,
             "no-func-assign": `error`,
+            "no-import-assign": `error`,
             "no-inner-declarations": [ `error`, `both` ],
             "no-invalid-regexp": `error`,
             "no-irregular-whitespace": [
@@ -54,21 +59,23 @@ module.exports = ecmaVersion => {
                     "skipTemplates": true,
                 },
             ],
+            "no-loss-of-precision": `error`,
             "no-misleading-character-class": `error`,
             "no-obj-calls": `error`,
             "no-prototype-builtins": `off`,
             "no-regex-spaces": `error`,
+            "no-setter-return": `error`,
             "no-sparse-arrays": `error`,
             "no-template-curly-in-string": `error`,
             "no-unexpected-multiline": `error`,
             "no-unreachable": `error`,
+            "no-unreachable-loop": `error`,
             "no-unsafe-finally": `error`,
             "no-unsafe-negation": `error`,
             "require-atomic-updates": `warn`,
             "use-isnan": `error`,
-            "valid-jsdoc": `warn`,
             "valid-typeof": `error`,
-
+            // best practices
             "accessor-pairs": [
                 `error`,
                 {
@@ -88,6 +95,8 @@ module.exports = ecmaVersion => {
             ],
             "curly": [ `error`, `all` ],
             "default-case": `error`,
+            "default-case-last": `error`,
+            "default-param-last": `error`,
             "dot-location": [ `error`, `property` ],
             "dot-notation": [
                 `error`,
@@ -103,11 +112,16 @@ module.exports = ecmaVersion => {
                     "null": `ignore`,
                 },
             ],
+            "grouped-accessor-pairs": [
+                `error`,
+                `setBeforeGet`,
+            ],
             "guard-for-in": `off`,
             "max-classes-per-file": [ `warn`, 1 ],
             "no-alert": `error`,
             "no-caller": `error`,
             "no-case-declarations": `error`,
+            "no-constructor-return": `error`,
             "no-div-regex": `error`,
             "no-else-return": `error`,
             "no-empty-function": [
@@ -189,15 +203,25 @@ module.exports = ecmaVersion => {
             "no-unused-expressions": `error`,
             "no-unused-labels": `error`,
             "no-useless-call": `error`,
+            "no-useless-catch": `error`,
             "no-useless-concat": `warn`,
             "no-useless-escape": `error`,
             "no-useless-return": `error`,
             "no-void": `warn`,
             "no-warning-comments": `warn`,
             "no-with": `error`,
+            "prefer-named-capture-group": es9 ? `error` : `off`,
             "prefer-promise-reject-errors": `error`,
+            "prefer-regex-literals":
+            [
+                `error`,
+                {
+                    "disallowRedundantWrapping": true,
+                },
+            ],
             "radix": [ `error`, `as-needed` ],
             "require-await": `error`,
+            "require-unicode-regexp": `off`,
             "vars-on-top": `off`,
             "wrap-iife": [
                 `error`,
@@ -213,9 +237,9 @@ module.exports = ecmaVersion => {
                     "exceptRange": true,
                 },
             ],
-
+            // strict mode
             "strict": [ `error`, `safe` ],
-
+            // variables
             "init-declarations": `off`,
             "no-delete-var": `error`,
             "no-label-var": `error`,
@@ -243,24 +267,7 @@ module.exports = ecmaVersion => {
                 },
             ],
             "no-use-before-define": `error`,
-
-            "callback-return": `warn`,
-            "global-require": `error`,
-            "handle-callback-err": [ `error`, `error` ],
-            "no-buffer-constructor": `error`,
-            "no-mixed-requires": [
-                `error`,
-                {
-                    "allowCall": true,
-                },
-            ],
-            "no-new-require": `error`,
-            "no-path-concat": `warn`,
-            "no-process-env": `off`,
-            "no-process-exit": `warn`,
-            "no-restricted-modules": [ `error` ],
-            "no-sync": `warn`,
-
+            // stylistic issues
             "array-bracket-newline": [
                 `error`,
                 {
@@ -309,8 +316,15 @@ module.exports = ecmaVersion => {
                     "allowArrowFunctions": true,
                 },
             ],
-            "function-paren-newline": `off`,
-            "id-blacklist": [ `error` ],
+            "function-call-argument-newline": [
+                `error`,
+                `consistent`,
+            ],
+            "function-paren-newline": [
+                `error`,
+                `consistent`,
+            ],
+            "id-denylist": [ `error` ],
             "id-length": [
                 `error`,
                 {
@@ -321,7 +335,13 @@ module.exports = ecmaVersion => {
             ],
             "id-match": [ `error` ],
             "implicit-arrow-linebreak": `off`,
-            "indent": [ `error`, 4 ],
+            "indent": [
+                `error`,
+                4,
+                {
+                    "SwitchCase": 1,
+                },
+            ],
             "jsx-quotes": [ `error`, `prefer-double` ],
             "key-spacing": [
                 `error`,
@@ -346,6 +366,10 @@ module.exports = ecmaVersion => {
             ],
             "linebreak-style": [ `error`, `unix` ],
             "lines-around-comment": `off`,
+            "lines-between-class-members": [
+                `error`,
+                `never`,
+            ],
             "max-depth": [ `warn`, 5 ],
             "max-len": [ `error`, 120, 4 ],
             "max-lines": [
@@ -373,7 +397,7 @@ module.exports = ecmaVersion => {
             "newline-per-chained-call": [
                 `error`,
                 {
-                    "ignoreChainWithDepth": 2,
+                    "ignoreChainWithDepth": 3,
                 },
             ],
             "no-array-constructor": `error`,
@@ -455,6 +479,8 @@ module.exports = ecmaVersion => {
                     "next": `directive`,
                 },
             ],
+            "prefer-exponentiation-operator": es7 ? `error` : `off`,
+            "prefer-object-spread": es9 ? `error` : `off`,
             "quote-props": [ `error`, `always` ],
             "quotes": [ `error`, es6 ? `backtick` : `double` ],
             "require-jsdoc": `off`,
@@ -503,7 +529,7 @@ module.exports = ecmaVersion => {
             "template-tag-spacing": [ `error`, `always` ],
             "unicode-bom": [ `error`, `never` ],
             "wrap-regex": `off`,
-
+            // es6
             "arrow-body-style": [ `error`, `as-needed` ],
             "arrow-parens": [ `error`, `as-needed` ],
             "arrow-spacing": [
@@ -537,6 +563,7 @@ module.exports = ecmaVersion => {
                 },
             ],
             "no-new-symbol": `error`,
+            "no-restricted-exports": [ `error` ],
             "no-restricted-imports": [ `error` ],
             "no-this-before-super": `error`,
             "no-useless-computed-key": `error`,
@@ -573,14 +600,7 @@ module.exports = ecmaVersion => {
             "prefer-template": es6 ? `error` : `off`,
             "require-yield": `error`,
             "rest-spread-spacing": [ `error`, `never` ],
-            "sort-imports": [
-                `error`,
-                {
-                    "ignoreCase": true,
-                    "ignoreMemberSort": false,
-                    "memberSyntaxSortOrder": [ `none`, `all`, `multiple`, `single` ],
-                },
-            ],
+            "sort-imports": `off`,
             "symbol-description": `error`,
             "template-curly-spacing": [ `error`, `always` ],
             "yield-star-spacing": [ `error`, `both` ],

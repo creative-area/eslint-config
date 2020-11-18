@@ -5,10 +5,10 @@
     },
     "description": "eslint configuration used in all creative-area's projects",
     "devDependencies": {
-        "eslint": "5.9.0"
+        "eslint": "7.13.0"
     },
     "eslintConfig": {
-        "extends": "./es2015.json",
+        "extends": "./es2019.json",
         "env": {
             "node": true
         }
@@ -22,7 +22,7 @@
     "license": "MIT",
     "name": "eslint-config-creative-area",
     "peerDependencies": {
-        "eslint": ">= 5.9.0"
+        "eslint": ">= 7.13.0"
     },
     "repository" : {
         "type" : "git",
