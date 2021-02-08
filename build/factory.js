@@ -342,6 +342,7 @@ module.exports = ecmaVersion => {
                 `error`,
                 4,
                 {
+                    "ignoredNodes": [ `TemplateLiteral > *` ],
                     "SwitchCase": 1,
                 },
             ],
